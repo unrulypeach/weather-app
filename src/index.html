@@ -5,35 +5,58 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>What's the Weather</title>
+  <script src="index.js" defer></script>
 </head>
 <body>
   <div class="date-container">
     <span id="date"></span>
   </div>
+
   <div class="time-container">
     <span id="time"></span>
   </div>
 
   <div class="search-container">
-    <label for="search">search</label>
-    <input type="text" name="search" id="search">
-    <script src="index.js"></script>
+    <label for="search"></label>
+    <input type="text" name="search" id="search" placeholder="Enter a city...">
+  </div>
+
+  <div class="unit-container">
+    <label class="switch">
+      C
+      <input type="checkbox" id="unit-select">
+      F
+      <span class="slider"></span>
+    </label>
   </div>
 
   <div class="city-container">
-    <span id="city-name"></span>
+    <h1 id="city-name"></h1>
+  </div>
+
+  <div class="descript-container">
+    <span id="descript"></span>
   </div>
 
   <div class="icon-temp-container">
-    <span id="icon"></span>
+    <img src="#" alt="icon for weather" id="icon">
     <span id="temp"></span>
   </div>
+
   <div class="other-info-container">
-    <span id="descript"></span>
     <span id="feels-like"></span>
+    <span id="temp-min-max"></span>
     <span id="humidity"></span>
+    <span id="wind-speed"></span>
   </div>
 
-
+  <h1 class="forecast-title"> 5-Day Forecast</h1>
+  <div class="forecast-container">
+    <div class="forecast-day">1</div>
+    <div class="forecast-day">2</div>
+    <div class="forecast-day">3</div>
+    <div class="forecast-day">4</div>
+    <div class="forecast-day">5</div>
+  </div>
 </body>
 </html>

@@ -3,20 +3,21 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: {
     index: './src/index.js',
     populate: './src/populate.js',
+    forecast: './src/forecast.js',
   },
   devServer: {
     static: './dist',
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: `How's the Weather`,
+      title: 'How\'s the Weather',
       hash: true,
       template: './src/index.html',
-      filename: './dist/index.html'
+      filename: './index.html',
     }),
   ],
   output: {
@@ -45,5 +46,5 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js'],
-  }
+  },
 };

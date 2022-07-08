@@ -6,16 +6,141 @@
 }
 :root{
   font-family: 'VT323';
-  color: rgb(85, 128, 45);
-  background-color: #000;
+  color: #000;
+  background-color: var(--bgc);
+  text-align: center;
+  --bgc: #6b7059;
+}
+.unit-container{
+  font-family: 'VT323';
+  margin: 5px 0;
 }
 .date-container{
   text-align: center;
 }
 #date{
   margin: auto;
-  font-size: 24px;
+  font-size: 42px;
 }
-.city-container{
-  font-size: 48px;
+#time{
+  font-size: 26px;
+}
+
+.search-container{
+  margin-top: 20px;
+}
+#search{
+  text-align: inherit;
+  font-family: 'VT323';
+  font-size: 21px;
+  background-color: var(--bgc);
+  border: none;
+  border-bottom: solid 1px #000;
+}
+#search:focus{
+  display: inline;
+  outline: none;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 22px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.25);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 4px;
+  bottom: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.city-container {
+  margin-top: 20px;
+}
+#city-name{
+  font-size: 62px;
+  font-weight: 600;
+  height: 64px;
+  margin: 0;
+}
+.descript-container{
+  font-size: 50px;
+}
+.icon-temp-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+}
+img{
+  height: 70px;
+  width: 70px;
+}
+#temp{
+  margin-left: 15px;
+  font-size: 42px;
+}
+.other-info-container{
+  padding-bottom: 45px;
+}
+.other-info-container > span {
+  display: block;
+}
+.forecast-title {
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+.forecast-container {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.forecast-day:nth-last-child(n+2) {
+  border-right: solid 1px #000;
+}
+.forecast-day > h2 {
+  font-weight: 600;
+  margin: 10px 0;
+}
+.forecast-temp {
+  margin: 10px 0;
 }
